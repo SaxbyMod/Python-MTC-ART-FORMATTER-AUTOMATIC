@@ -1,6 +1,6 @@
 # Automatic MTC Art Formatter
 
-This script automates the process of converting and resizing card art images for the **Magic: The Gathering (MTC)** card game. It includes two main functionalities: converting card art to MTC format and descaling/rescaling art.
+This script automates the process of converting and resizing card art images for the **Mine Trading Cards (MTC)** card game. It includes two main functionalities: converting card art to MTC format and descaling/rescaling art.
 
 ## Getting Started
 
@@ -13,33 +13,31 @@ This script automates the process of converting and resizing card art images for
 
 1. Clone the repository to your local machine.
 2. Install the required dependencies by running:
-
+    
     ```bash
     pip install pillow
     ```
+    
 
 ## Usage
 
-1. **Prepare Your Artwork:**
-   - Place the original card art images in the `Input` folder.
-   - Ensure the filenames follow the desired format: `[Name](Category)[Description]_Rarity.png`.
-
+1. **Prepare Your Artwork (If also using the C# Gen Below 2nd bullet applies):**
+    - Place the original card art images in the `Input` folder.
+    - Ensure the filenames follow the desired format: `Name(Category)[Description]_Rarity.png`.
 2. **Run the Script:**
-   - Open a terminal in the script's directory.
-   - Execute the following command:
-
-     ```bash
-     python RUNME.py
-     ```
-
-   - Enter the desired `edition_id` when prompted.
-
+    - Open a terminal in the script's directory.
+    - Execute the following command:
+        
+        ```bash
+        python RUNME.py
+        ```
+        
+    - Enter the desired `edition_id` when prompted.
 3. **Review Output:**
-   - The converted card art will be placed in the `CvrtrOutput` folder.
-   - The descaled/rescaled art will be in the `RescalerOutput` folder.
-
+    - The converted card art will be placed in the `CvrtrOutput` folder.
+    - The descaled/rescaled art will be in the `RescalerOutput` folder.
 4. **Clean Output Folders (Optional):**
-   - To remove the contents of the output folders before each run, simply run the script.
+    - To remove the contents of the output folders before each run, simply run the script.
 
 ## Notes
 
