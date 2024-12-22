@@ -92,7 +92,7 @@ def convert_card_art(input_dir, output_dir):
         print(filename + " Completed")
         # Save the new image
         new_image_path = os.path.join(output_dir, new_filename)
-        new_img.save(new_image_path)
+        new_img.save(new_image_path.replace(' ', '_'))
 
         # Close the images
         img.close()
