@@ -114,7 +114,7 @@ def resize_images(input_folder, output_folder):
                 else:
                     resized_image = image.resize((448, 448), Image.LANCZOS)
 
-                resized_image.save(output_path, quality=95)
+                resized_image.save(output_path.replace(' ', '_'), quality=95)
 
             logging.info(f"Image exported: {output_path}")
 
