@@ -64,6 +64,7 @@ def convert_card_art(input_dir, output_dir):
 
     # Iterate over the original images
     for i, filename in enumerate(sorted(os.listdir(input_dir))):
+        i += 1
         print(filename)
         # Path to the original image
         old_image_path = os.path.join(input_dir, filename)
@@ -91,8 +92,8 @@ def convert_card_art(input_dir, output_dir):
         new_filename = f"{str(i).zfill(zero_padding_length)}_{filename}"
         print(filename + " Completed")
         # Save the new image
-        new_image_path = os.path.join(output_dir, new_filename)
-        new_img.save(new_image_path.replace(' ', '_'))
+        new_image_path = os.path.join(output_dir, new_filename.replace(' ', '_'))
+        new_img.save(new_image_path)
 
         # Close the images
         img.close()
@@ -102,7 +103,7 @@ def resize_images(input_folder, output_folder):
     for filename in os.listdir(input_folder):
         if filename.endswith((".jpg", ".jpeg", ".png")):
             input_path = os.path.join(input_folder, filename)
-            output_path = os.path.join(output_folder, filename)
+            output_path = os.path.join(output_folder, filename.replace(' ', '_'))
 
             logging.info(f"Importing image: {input_path}")
 
@@ -114,7 +115,7 @@ def resize_images(input_folder, output_folder):
                 else:
                     resized_image = image.resize((448, 448), Image.LANCZOS)
 
-                resized_image.save(output_path.replace(' ', '_'), quality=95)
+                resized_image.save(output_path, quality=95)
 
             logging.info(f"Image exported: {output_path}")
 
